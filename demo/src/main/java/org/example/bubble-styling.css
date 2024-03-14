@@ -1,0 +1,17 @@
+.bubble {
+    -fx-background-color: #d3d3d3; /* Light gray background */
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+}
+
+/* Style for bubbles sent by the user */
+.sent-bubble {
+    -fx-background-color: #66ccff; /* Light blue background */
+    -fx-alignment: center-right; /* Align to the right side */
+}
+
+/* Style for bubbles received from other users */
+.received-bubble {
+    -fx-background-color: #ffd700; /* Gold background */
+    -fx-alignment: center-left; /* Align to the left side */
+}

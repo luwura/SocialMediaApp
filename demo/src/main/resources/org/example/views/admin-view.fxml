@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.AdminController">
+    <children>
+        <VBox layoutX="15.0" layoutY="23.0" prefHeight="355.0" prefWidth="570.0">
+            <children>
+                <TableView fx:id="tableView" prefHeight="291.0" prefWidth="566.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnUserId" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="tableColumnFirstName" prefWidth="90.0" text="FirstName" />
+                        <TableColumn fx:id="tableColumnLastName" prefWidth="122.0" text="LastName" />
+                        <TableColumn fx:id="tableColumnUsername" prefWidth="97.0" text="Username" />
+                        <TableColumn fx:id="tableColumnPassword" prefWidth="95.0" text="Password" />
+                        <TableColumn fx:id="tableColumnEmail" prefWidth="90.0" text="Email" />
+                    </columns>
+                </TableView>
+                <ButtonBar prefHeight="59.0" prefWidth="532.0">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#handleAddUser" text="Add User">
+                            <font>
+                                <Font name="Candara Light" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleDeleteUser" text="Delete User">
+                            <font>
+                                <Font name="Candara Light" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleUpdateUser" text="Update User">
+                            <font>
+                                <Font name="Candara Light" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Exit">
+                            <font>
+                                <Font name="Candara Light" size="14.0" />
+                            </font>
+                        </Button>
+                    </buttons>
+                    <VBox.margin>
+                        <Insets right="50.0" />
+                    </VBox.margin>
+                </ButtonBar>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

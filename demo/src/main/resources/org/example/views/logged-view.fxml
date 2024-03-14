@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFC0CB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoggedController">
+   <children>
+      <StackPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane fx:id="chatPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFC0CB;">
+               <children>
+                  <Text layoutX="205.0" layoutY="46.0" stroke="BLACK" strokeType="OUTSIDE" style="-fx-fill: #FF69B4;" text="☆CHATS☆" textAlignment="CENTER" wrappingWidth="189.13671875">
+                     <font>
+                        <Font name="Candara Light" size="34.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="friendsTableView" layoutX="72.0" layoutY="71.0" prefHeight="290.0" prefWidth="456.0" style="-fx-background-color: #FFECF0;">
+                     <columns>
+                        <TableColumn fx:id="tableColumnFriendsId" prefWidth="107.0" text="Id" />
+                        <TableColumn fx:id="tableColumnFriendsName" prefWidth="348.0" text="Name" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="412.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleStartChat" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #FF69B4; -fx-text-fill: white;" text="Start chat" AnchorPane.leftAnchor="412.0" AnchorPane.topAnchor="358.0" />
+                  <TextField fx:id="pageTextField" layoutX="163.0" prefHeight="26.0" prefWidth="59.0" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="358.0" />
+                  <Button  onAction="#handleLastPage" layoutX="94.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="&lt;" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="358.0" />
+                  <Button  onAction="#handleNextPage" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="&gt;" AnchorPane.leftAnchor="234.0" AnchorPane.topAnchor="358.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="reqPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFC0CB;">
+               <children>
+                  <Text layoutX="149.0" layoutY="46.0" stroke="BLACK" strokeType="OUTSIDE" style="-fx-fill: #FF69B4;" text="☆REQUESTS☆" textAlignment="CENTER" wrappingWidth="302.13671875">
+                     <font>
+                        <Font name="Candara Light" size="34.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="pendingTableView" layoutX="72.0" layoutY="71.0" prefHeight="139.0" prefWidth="456.0" style="-fx-background-color: #FFECF0;">
+                     <columns>
+                        <TableColumn fx:id="tableColumnPendingId" prefWidth="107.0" style="-fx-background-color: #FF69B4; -fx-text-fill: white;" text="Id" />
+                        <TableColumn fx:id="tableColumnPendingName" prefWidth="348.0" style="-fx-background-color: #FF69B4; -fx-text-fill: white;" text="Name" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="othersTableView" layoutX="72.0" layoutY="237.0" prefHeight="139.0" prefWidth="456.0" style="-fx-background-color: #FFECF0;">
+                     <columns>
+                        <TableColumn fx:id="tableColumnOthersId" prefWidth="107.0" style="-fx-background-color: #FF69B4; -fx-text-fill: white;" text="Id" />
+                        <TableColumn fx:id="tableColumnOthersName" prefWidth="348.0" style="-fx-background-color: #FF69B4; -fx-text-fill: white;" text="Name" />
+                     </columns>
+                  </TableView>
+                  <Text layoutX="6.0" layoutY="145.0" rotate="-90.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.3" style="-fx-fill: #FF69B4;" text="Pending" textAlignment="CENTER" wrappingWidth="87.13671875">
+                     <font>
+                        <Font name="Candara Light" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="6.0" layoutY="311.0" rotate="-90.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.3" style="-fx-fill: #FF69B4;" text="Others" textAlignment="CENTER" wrappingWidth="87.13671875">
+                     <font>
+                        <Font name="Candara Light" size="18.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+         </children>
+      </StackPane>
+      <ChoiceBox fx:id="choiceBox" onAction="#handleSwitchScenes" prefWidth="150.0" style="-fx-background-color: #FF69B4; -fx-text-fill: white;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Chats tab" />
+               <String fx:value="Requests tab" />
+            </FXCollections>
+         </items>
+         <value>
+            <String fx:value="Chats tab" />
+         </value>
+      </ChoiceBox>
+   </children>
+</AnchorPane>

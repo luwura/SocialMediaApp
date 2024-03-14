@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="457.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MessagingController">
+   <children>
+      <ListView fx:id="listView" layoutX="14.0" layoutY="97.0" prefHeight="299.0" prefWidth="512.0" />
+      <HBox alignment="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="83.0" prefWidth="512.0">
+         <children>
+            <Button layoutX="483.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="40.0" prefWidth="35.0" text="x" />
+            <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="DIRECT MESSAGING X" textAlignment="CENTER" wrappingWidth="372.13671875">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font></Text>
+            <Button mnemonicParsing="false" onAction="#handleDeleteFriend" prefHeight="40.0" prefWidth="95.0" text="Delete friend" textAlignment="CENTER" />
+         </children>
+      </HBox>
+      <Button layoutX="389.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleSendText" prefHeight="25.0" prefWidth="58.0" text="Send" />
+      <TextField fx:id="messageField" layoutX="14.0" layoutY="410.0" prefHeight="25.0" prefWidth="358.0" />
+      <Button layoutX="467.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleReply" prefHeight="25.0" prefWidth="58.0" text="Reply" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoginController">
+    <children>
+        <VBox layoutX="32.0" layoutY="25.0" prefHeight="401.0" prefWidth="570.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="400.0" text="WhatsApp but worse" translateX="70.0">
+                    <font>
+                        <Font name="Candara Light" size="44.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="30.0" top="30.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox prefHeight="87.0" prefWidth="400.0" VBox.vgrow="NEVER">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="200.0" text="                   E-mail :">
+                            <font>
+                                <Font name="Candara Light" size="22.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="email" minWidth="-Infinity" prefWidth="200.0" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="70.0" right="120.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="87.0" prefWidth="400.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="26.0" prefWidth="181.0" text="         Password : ">
+                            <font>
+                                <Font name="Candara Light" size="22.0" />
+                            </font>
+                        </Label>
+                        <PasswordField fx:id="passwd" prefHeight="25.0" prefWidth="199.0" />
+                    </children>
+                    <VBox.margin>
+                        <Insets left="70.0" right="120.0" />
+                    </VBox.margin>
+                </HBox>
+                <ButtonBar prefHeight="41.0" prefWidth="371.0">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#handleSuccessfulLogin" prefHeight="41.0" prefWidth="114.0" text="Log In">
+                            <font>
+                                <Font name="Candara Light" size="22.0" />
+                            </font>
+                        </Button>
+                    </buttons>
+                    <VBox.margin>
+                        <Insets right="220.0" />
+                    </VBox.margin>
+                </ButtonBar>
+            </children></VBox>
+    </children>
+</AnchorPane>
